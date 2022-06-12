@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta name="author" content="Mateusz Cieryt">
+    <meta charset="utf-8">
+    <title>3D model viewer</title>
+    <link rel="stylesheet" href="zadanie_2.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+    <div id="holder">
+        <div id="text">
+            <h1 class="sample-text">Viewer modeli 3D o rozszerzeniach .glb i .gltf</h1>
+            <input type="file" id="file" onchange="zmien()">
+        </div>
+        <div id="model">
+            <div id="gora_lewo"></div>
+            <div id="gora_lewo2"></div>
+            <div id="gora_prawo"></div>
+            <div id="gora_prawo2"></div>
+            
+            <model-viewer id="output" camera-controls></model-viewer> 
+            
+            <div id="dol_lewo"></div>
+            <div id="dol_lewo2"></div>
+            <div id="dol_prawo"></div>
+            <div id="dol_prawo2"></div>
+        </div>
+    </div>
+    
+
+</body>
+<script>
+    function zmien() {
+	var plik = document.getElementById('output');
+	plik.src = URL.createObjectURL(event.target.files[0]);
+};  
+</script>
+
+</html>

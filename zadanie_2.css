@@ -1,0 +1,73 @@
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #455A64;
+}
+
+#holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+#text {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    margin: 0px 45px;
+}
+
+#model{
+    background-color: rgb(63, 36, 111, 0.5);
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+#gora_lewo, #gora_prawo, #dol_lewo, #dol_prawo{
+    width: 0;
+	height: 0;
+	border-left: 45px solid transparent;
+	border-right: 45px solid transparent;
+	border-top: 45px solid #555555;
+    z-index: 2;
+}
+#gora_lewo2, #gora_prawo2, #dol_lewo2, #dol_prawo2{
+    width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #ffffff;
+    z-index: 1;
+}
+#gora_lewo, #gora_lewo2{
+    position:absolute;
+    top: 0;
+    transform: rotate(135deg); 
+}
+#gora_prawo, #gora_prawo2 {
+    position:absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-135deg);  
+}
+#dol_lewo, #dol_lewo2{
+    position:absolute;
+    bottom: 0;
+    transform: rotate(45deg);  
+}
+#dol_prawo, #dol_prawo2{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-45deg); 
+    
+}
